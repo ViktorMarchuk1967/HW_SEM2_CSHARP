@@ -5,30 +5,24 @@
 918 -> 1
 */
 
+/*
 int InputNum(string message)
 {
     Console.Write(message);
     return int.Parse(Console.ReadLine()!);
 }
 
-int Number(int num)
+int TwoDigitNumber(int num)
 {
     num /= 10;
     num %= 10;
-    
-    // int res = 0;
-    // while (num != 0)
-    // {
-    //     num /= 10;
-    //     res++;
-    // }
     return num;
 }
 
 int number = InputNum("Введите трехзначное число: ");
-int result = Number(number);
+int result = TwoDigitNumber(number);
 Console.WriteLine($"Вторая цифра числа: {result}");
-
+*/
 
 
 /*
@@ -37,6 +31,30 @@ Console.WriteLine($"Вторая цифра числа: {result}");
 78 -> третьей цифры нет
 32679 -> 6
 */
+
+
+int InputNum(string message)
+{
+    Console.Write(message);
+    return int.Parse(Console.ReadLine()!);
+}
+
+int ThreeDigitNumber(int num)
+{
+    num /= 100;
+    num %= 10;
+    return num;
+}
+
+int number = InputNum("Введите целое число: ");
+int result = ThreeDigitNumber(number);
+if (result != 0)
+    Console.WriteLine($"Третья цифра числа: {result}");
+else
+    Console.WriteLine("Третьей цифры в числе нет");
+
+
+
 
 /*Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 6 -> да
