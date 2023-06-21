@@ -32,7 +32,7 @@ Console.WriteLine($"Вторая цифра числа: {result}");
 32679 -> 6
 */
 
-
+/*
 int InputNum(string message)
 {
     Console.Write(message);
@@ -52,7 +52,7 @@ if (result != 0)
     Console.WriteLine($"Третья цифра числа: {result}");
 else
     Console.WriteLine("Третьей цифры в числе нет");
-
+*/
 
 
 
@@ -64,4 +64,17 @@ else
 Решение 10 и 13 задачи должно быть выполнено без использования свойств строк
 */
 
+int InputNum(string message)
+{
+    Console.Write(message);
+    return int.Parse(Console.ReadLine()!);
+}
+
+
+
+int num_day = InputNum("Введите номер дня недели: ");
+if (num_day == 6 || num_day == 7)
+    Console.WriteLine("Да");
+else
+    Console.WriteLine("Нет");
 
